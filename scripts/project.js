@@ -12,7 +12,7 @@ function cancel(event){
 }
 
 // create new project wnen submit
-project_num = 1;
+let project_num = 1;
 function newProjectSubmit(event){
     let target = event.target;
     const text = document.getElementById("project_name_box").value;
@@ -21,7 +21,7 @@ function newProjectSubmit(event){
     const asidebar = document.getElementById("asidebar");
     const newProject_btn = document.getElementById("new_project");
     project_btn.id = `project${project_num}`;
-    project_btn++;
+    project_num++;
     project_btn.innerHTML = text;
     project_btn.className = "project";
     asidebar.appendChild(project_btn);
