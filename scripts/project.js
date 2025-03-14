@@ -1,5 +1,5 @@
 // show new project dialog
-function New_project() {
+function newProject() {
     const newProjectDialog = document.getElementById("new_project_dialog");    
     newProjectDialog.showModal();
 }
@@ -24,7 +24,13 @@ function newProjectSubmit(event){
     project_num++;
     project_btn.innerHTML = text;
     project_btn.className = "project";
+    project_btn.onclick = chooseProject();
     asidebar.appendChild(project_btn);
     newProject_btn.before(project_btn);
     dialog.close();
+}
+
+// choose the project which is chosen
+function chooseProject(){
+
 }

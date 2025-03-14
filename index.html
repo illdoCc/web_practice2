@@ -10,15 +10,23 @@
     <div style="background-color: violet; border-bottom:2px solid; width: 100vw; height: 80px; font-size: 50px; text-align: center; vertical-align: middle; line-height: 80px;">
       Todo List
     </div>
+
     <!-- 側邊欄 -->
     <aside id="asidebar">
-      <button onclick="choose_this_project()" id="inbox" class="project">
+      <button onclick="chooseProject()()" id="inbox" class="project">
       Inbox
       </button>
-      <button onclick="New_project()" id="new_project">
+      <button onclick="newProject()" id="new_project">
         New Project
       </button>
     </aside>
+
+    <!-- 新增右邊任務列表 -->
+    <div class="content">
+      <!-- 這裡放list -->
+      <button onclick="new_task()" id="new_task">New Task</button>
+    </div>
+
     <!-- 新增Project視窗 -->
     <dialog id="new_project_dialog">
       Task Name: 

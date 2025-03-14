@@ -24,6 +24,9 @@ aside {
   display: block;
   margin: 10px;
 }
+#new_task {
+  margin: 10px;
+}
 .project {
   border: none;
   border-bottom: 2px rgb(0, 0, 0) solid;
