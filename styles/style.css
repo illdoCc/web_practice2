@@ -36,3 +36,8 @@ aside {
   height: 50px;
   font-size: 20px;
 }
+.new_task_input {
+  display: block; 
+  margin-top: 5px; 
+  margin-bottom: 10px;
+}

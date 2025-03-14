@@ -34,3 +34,9 @@ function newProjectSubmit(event){
 function chooseProject(){
 
 }
+
+// add a new task
+function newTask(){
+    const dialog = document.getElementById("new_task_dialog");
+    dialog.showModal();
+}

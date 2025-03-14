@@ -23,8 +23,8 @@
 
     <!-- 新增右邊任務列表 -->
     <div class="content">
-      <!-- 這裡放list -->
-      <button onclick="new_task()" id="new_task">New Task</button>
+      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!還沒寫，這裡放list -->
+      <button onclick="newTask()" id="new_task">New Task</button>
     </div>
 
     <!-- 新增Project視窗 -->
@@ -33,6 +33,15 @@
       <input type="text" id="project_name_box" name="project_name_box" placeholder="Project Name" size="10" />
       <button onclick="cancel(event)">Cancel</button>
       <button onclick="newProjectSubmit(event)">Submit</button>
+    </dialog>
+    <!-- 新增new task視窗 -->
+    <dialog id="new_task_dialog">
+      Task Name<br />
+      <input class="new_task_input" type="text" id="task_name_box" name="task_name_box" placeholder="Task" size="10" />
+      Description<br />
+      <input class="new_task_input" type="text" id="description_box" name="description_box" placeholder="Description" size="10" />
+      Due Date<br />
+      <!-- !!!!!!!!!!!!!!!!!還沒寫 -->
     </dialog>
     <script src="scripts/main.js"></script>
     <script src="scripts/project.js"></script>
