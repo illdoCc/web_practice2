@@ -11,10 +11,10 @@ aside {
   border-right: 1px #0e0909 solid;
   height: 100vw;
 }
-#task_name_box::placeholder {
+#project_name_box::placeholder {
   color: rgb(173, 220, 173);
 }
-#task_name_box, select, textarea {
+#project_name_box, select, textarea {
   color: #0e0909;
 }
 #inbox {

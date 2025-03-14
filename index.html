@@ -6,11 +6,12 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <!-- 標題 -->
     <div style="background-color: violet; border-bottom:2px solid; width: 100vw; height: 80px; font-size: 50px; text-align: center; vertical-align: middle; line-height: 80px;">
       Todo List
     </div>
     <!-- 側邊欄 -->
-    <aside>
+    <aside id="asidebar">
       <button onclick="choose_this_project()" id="inbox" class="project">
       Inbox
       </button>
@@ -18,11 +19,12 @@
         New Project
       </button>
     </aside>
+    <!-- 新增Project視窗 -->
     <dialog id="new_project_dialog">
-      Task Name
-      <input type="text" id="task_name_box" name="task_name_box" placeholder="Task Name" size="10" />
-      <button>Cancel</button>
-      <button>Submit</button>
+      Task Name: 
+      <input type="text" id="project_name_box" name="project_name_box" placeholder="Project Name" size="10" />
+      <button onclick="cancel(event)">Cancel</button>
+      <button onclick="newProjectSubmit(event)">Submit</button>
     </dialog>
     <script src="scripts/main.js"></script>
     <script src="scripts/project.js"></script>
