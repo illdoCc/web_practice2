@@ -1,0 +1,27 @@
+h1{
+    color: rgb(111, 95, 179);
+  }
+#task_name_box::placeholder {
+    color: rgb(173, 220, 173);
+  }
+#task_name_box, select, textarea{
+    color: #0e0909;
+}
+
+#chiikawa {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#hachiware {
+    position: fixed;
+    bottom: 0px;
+    right: 200px;
+}
+
+#usagi {
+  position: fixed;
+  bottom: 0px;
+  right: 400px;
+}
