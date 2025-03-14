@@ -17,9 +17,9 @@ aside {
 #project_name_box, select, textarea {
   color: #0e0909;
 }
-#inbox {
+/* #inbox {
   display: block;
-}
+} */
 #new_project {
   display: block;
   margin: 10px;
@@ -28,6 +28,7 @@ aside {
   border: none;
   border-bottom: 2px rgb(0, 0, 0) solid;
   background-color: rgb(255, 255, 255);
+  display: block;
   width: 200px;
   height: 50px;
   font-size: 20px;
