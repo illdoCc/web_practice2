@@ -1,27 +1,34 @@
-h1{
-    color: rgb(111, 95, 179);
-  }
+html, body {
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
+}
+body {
+  font-family: Arial;
+}
+aside {
+  float: left;
+  border-right: 1px #0e0909 solid;
+  height: 100vw;
+}
 #task_name_box::placeholder {
-    color: rgb(173, 220, 173);
-  }
-#task_name_box, select, textarea{
-    color: #0e0909;
+  color: rgb(173, 220, 173);
 }
-
-#chiikawa {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+#task_name_box, select, textarea {
+  color: #0e0909;
 }
-
-#hachiware {
-    position: fixed;
-    bottom: 0px;
-    right: 200px;
+#inbox {
+  display: block;
 }
-
-#usagi {
-  position: fixed;
-  bottom: 0px;
-  right: 400px;
+#new_project {
+  display: block;
+  margin: 10px;
+}
+.project {
+  border: none;
+  border-bottom: 2px rgb(0, 0, 0) solid;
+  background-color: rgb(255, 255, 255);
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
 }

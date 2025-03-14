@@ -6,14 +6,25 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Todo List</h1>
-    <input type="text" id="task_name_box" name="task_name_box" placeholder="Task Name" size="10" />
-    <button onclick="create_task_btn()" id="create_btn">Create</button>
-    
-    <img src="https://custom-doodle.com/wp-content/uploads/doodle/auto-draft/dancing-chiikawa-doodle.gif" id="chiikawa" width="200" />
-    <img src="https://media1.tenor.com/m/k0BIyQU8ye0AAAAC/chiikawa-hachieware.gif" id="hachiware" width="200" />
-    <img src="https://memeprod.ap-south-1.linodeobjects.com/user-maker-thumbnail/2dfd51730820f2e51482bd1a0aae32fb.gif" id="usagi" width="200" />
-    <!--img src="images/firefox-icon.png" alt="My test image" /-->
+    <div style="background-color: violet; border-bottom:2px solid; width: 100vw; height: 80px; font-size: 50px; text-align: center; vertical-align: middle; line-height: 80px;">
+      Todo List
+    </div>
+    <!-- 側邊欄 -->
+    <aside>
+      <button onclick="choose_this_project()" id="inbox" class="project">
+      Inbox
+      </button>
+      <button onclick="New_project()" id="new_project">
+        New Project
+      </button>
+    </aside>
+    <dialog id="new_project_dialog">
+      Task Name
+      <input type="text" id="task_name_box" name="task_name_box" placeholder="Task Name" size="10" />
+      <button>Cancel</button>
+      <button>Submit</button>
+    </dialog>
     <script src="scripts/main.js"></script>
+    <script src="scripts/project.js"></script>
   </body>
 </html>
