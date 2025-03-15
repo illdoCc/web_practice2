@@ -40,3 +40,7 @@ function newTask(){
     const dialog = document.getElementById("new_task_dialog");
     dialog.showModal();
 }
+
+function newTaskSubmit(){
+    
+}

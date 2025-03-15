@@ -38,6 +38,7 @@ aside {
 }
 .new_task_input {
   display: block; 
+  width: 200px;
   margin-top: 5px; 
   margin-bottom: 10px;
 }
