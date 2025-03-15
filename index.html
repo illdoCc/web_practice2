@@ -22,7 +22,7 @@
     </aside>
 
     <!-- 新增右邊任務列表 -->
-    <div class="content">
+    <div class="content" id="content">
       <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!還沒寫，這裡放list -->
       <button onclick="newTask()" id="new_task">New Task</button>
     </div>
@@ -42,10 +42,9 @@
       Due Date<br />
       <input class="new_task_input" type="date" id="date_box" name="data_box" />
       Priority(1 is most important)<br />
-      <input class="new_task_input" type="number" id="priority" name="priority" min="1" />
+      <input class="new_task_input" type="number" id="priority" name="priority" min="1" max="4" />
       <button onclick="cancel(event)">Cancel</button>
       <button onclick="newTaskSubmit(event)">Submit</button>
-      <!-- !!!!!!!!!!!!!!!!!還沒寫 -->
     </dialog>
     <script src="scripts/main.js"></script>
     <script src="scripts/project.js"></script>
