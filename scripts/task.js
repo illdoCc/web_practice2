@@ -9,7 +9,7 @@ function newTaskSubmit(){
     const newTaskBtn = document.getElementById("new_task");
     let taskArea = document.getElementById("content");
     const taskName = document.getElementById("task_name_box").value;
-    const description = document.getElementById("description_box");
+    const description = document.getElementById("description_box").value;
     const date = document.getElementById("date_box");
     let priority = document.getElementById("priority").value;
     priority = priority === "" ? "4" : priority;
@@ -20,21 +20,27 @@ function newTaskSubmit(){
     let taskNameLabel = document.createElement("label");
     let checkbox = document.createElement("input");
     let deleteButton = document.createElement("button");
+    let description_p = document.createElement("p");
+    task.className = "task";
+    
     checkbox.setAttribute("type", "checkbox");
     checkbox.className = "check_box";
-    task.className = "task";
     taskNameLabel.className = "task_label";
     taskNameLabel.innerHTML = priorityIcon[priority] + taskName;
-    deleteButton.innerHTML = deleteIcon;
+    description_p.className = "description";
+    description_p.textContent = description;
     deleteButton.className = "delete_btn"
+    deleteButton.innerHTML = deleteIcon;
     deleteButton.onclick = (function(event) {
         event.target.parentElement.remove();
     });
     task.appendChild(checkbox);
     task.appendChild(taskNameLabel);
-    task.appendChild(deleteButton);
     
+    task.appendChild(deleteButton);
+    taskNameLabel.appendChild(description_p);
     taskArea.appendChild(task);
+    // taskNameLabel.after(description_p);
     newTaskBtn.before(task);
     dialog.close();
 }

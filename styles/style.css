@@ -49,17 +49,17 @@ aside {
   display: flex;
   border: none;
   border-bottom: 2px black solid;
-  height: 50px;
+  height: 60px;
   align-items: center;
 }
-/* .task_label {
-  vertical-align: middle;
-} */
 .check_box {
   margin: 10px;
-  /* vertical-align: middle; */
-}
+} 
 .delete_btn {
   position: absolute;
   right: 15px;
+}
+.description {
+  margin: 0;
+  color: gray;  
 }
