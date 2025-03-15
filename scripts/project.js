@@ -34,23 +34,3 @@ function newProjectSubmit(event){
 function chooseProject(){
 
 }
-
-// add a new task
-function newTask(){
-    const dialog = document.getElementById("new_task_dialog");
-    dialog.showModal();
-}
-
-function newTaskSubmit(){
-    const taskArea = document.getElementById("content");
-    const taskName = document.getElementById("task_name_box");
-    const description = document.getElementById("description_box");
-    const date = document.getElementById("date_box");
-    const priority = document.getElementById("priority");
-    const priorityIcon = {"1": "🔴", "2": "🟠", "3": "🟡", "4": "🟢"};
-    const deleteIcon = "🗑️";
-
-
-    let task = document.createElement("div");
-
-}

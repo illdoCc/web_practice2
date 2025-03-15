@@ -27,6 +27,9 @@ aside {
 #new_task {
   margin: 10px;
 }
+#content{
+  overflow: hidden;
+}
 .project {
   border: none;
   border-bottom: 2px rgb(0, 0, 0) solid;
@@ -41,4 +44,22 @@ aside {
   width: 200px;
   margin-top: 5px; 
   margin-bottom: 10px;
+}
+.task {
+  display: flex;
+  border: none;
+  border-bottom: 2px black solid;
+  height: 50px;
+  align-items: center;
+}
+/* .task_label {
+  vertical-align: middle;
+} */
+.check_box {
+  margin: 10px;
+  /* vertical-align: middle; */
+}
+.delete_btn {
+  position: absolute;
+  right: 15px;
 }
