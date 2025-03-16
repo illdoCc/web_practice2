@@ -5,6 +5,7 @@ function newTask(){
 }
 
 function newTaskSubmit(){
+    // !!!!!!NOT COMPLETE多加一個projects div在content裡面，當user點擊不同的project時，直接更換projects div
     const dialog = document.getElementById("new_task_dialog");
     const newTaskBtn = document.getElementById("new_task");
     let taskArea = document.getElementById("content");
@@ -47,8 +48,4 @@ function newTaskSubmit(){
     // taskNameLabel.after(description_p);
     newTaskBtn.before(task);
     dialog.close();
-}
-
-function deleteTask(){
-
 }

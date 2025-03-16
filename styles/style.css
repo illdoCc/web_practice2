@@ -39,6 +39,9 @@ aside {
   height: 50px;
   font-size: 20px;
 }
+.project.active {
+  background-color: rgba(215, 215, 215, 0.727);
+}
 .new_task_input {
   display: block; 
   width: 200px;
