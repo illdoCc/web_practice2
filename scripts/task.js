@@ -10,7 +10,7 @@ function newTaskSubmit(){
     let taskArea = document.getElementById("content");
     const taskName = document.getElementById("task_name_box").value;
     const description = document.getElementById("description_box").value;
-    const date = document.getElementById("date_box");
+    const date = document.getElementById("date_box").value;
     let priority = document.getElementById("priority").value;
     priority = priority === "" ? "4" : priority;
     const priorityIcon = {"1": "🔴 ", "2": "🟠 ", "3": "🟡 ", "4": "🟢 "};
@@ -28,7 +28,11 @@ function newTaskSubmit(){
     taskNameLabel.className = "task_label";
     taskNameLabel.innerHTML = priorityIcon[priority] + taskName;
     description_p.className = "description";
-    description_p.textContent = description;
+    if(date == ""){
+        description_p.textContent = description;
+    }else{
+        description_p.textContent = description + ", " + date;
+    }
     deleteButton.className = "delete_btn"
     deleteButton.innerHTML = deleteIcon;
     deleteButton.onclick = (function(event) {
