@@ -13,17 +13,19 @@
 
     <!-- 側邊欄 -->
     <aside id="asidebar">
-      <button onclick="chooseProject(0)" id="project0" class="project active">
-      Inbox
-      </button>
+      <div onclick="chooseProject(0)" id="project0" class="project active" style="width: 250px;">
+        Inbox
+      </div>
       <button onclick="newProject()" id="new_project">
         New Project
       </button>
     </aside>
 
     <!-- 新增右邊任務列表 -->
-    <div class="content" id="content">
-      <button onclick="newTask()" id="new_task">New Task</button>
+    <div class="content" id="content" style="background-color: antiquewhite;">
+      <div class="projectArea choose" id="project_page0" style="background-color: rgba(127, 255, 212, 0.231);">
+        <button onclick="newTask()" id="new_task0" class="newTaskbtn">New Task</button>
+      </div>
     </div>
 
     <!-- 新增Project視窗 -->
@@ -48,7 +50,7 @@
       <button onclick="newTaskSubmit(event)">Submit</button>
     </dialog>
     <!-- <script src="scripts/main.js"></script> -->
-    <script src="scripts/project.js"></script>
     <script src="scripts/task.js"></script>
+    <script src="scripts/project.js"></script>
   </body>
 </html>

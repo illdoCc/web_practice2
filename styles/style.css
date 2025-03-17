@@ -24,17 +24,19 @@ aside {
   display: block;
   margin: 10px;
 }
-#new_task {
+/* #new_task {
   margin: 10px;
-}
-#content{
-  overflow: hidden;
-}
+} */
+
+
 .project {
   border: none;
   border-bottom: 2px rgb(0, 0, 0) solid;
   background-color: rgb(255, 255, 255);
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 200px;
   height: 50px;
   font-size: 20px;
@@ -62,7 +64,34 @@ aside {
   position: absolute;
   right: 15px;
 }
+.test {
+  position: absolute;
+  right: 15px;
+}
 .description {
   margin: 0;
   color: gray;  
+}
+#content{
+  position: relative;
+  margin-left: 241px;
+  /* overflow: hidden; */
+}
+#asidebar {
+  width: 240px;
+  overflow: hidden;
+}
+.projectArea {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.projectArea.choose {
+  visibility: visible;
+}
+.newTaskbtn {
+  margin: 10px;
 }
