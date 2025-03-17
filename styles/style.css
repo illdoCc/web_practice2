@@ -44,26 +44,21 @@ aside {
 .project.active {
   background-color: rgba(215, 215, 215, 0.727);
 }
+.delete_btn {
+  position: absolute;
+  right: 15px;
+}
 .new_task_input {
   display: block; 
   width: 200px;
   margin-top: 5px; 
   margin-bottom: 10px;
 }
-.task {
-  display: flex;
-  border: none;
-  border-bottom: 2px black solid;
-  height: 60px;
-  align-items: center;
-}
+
 .check_box {
   margin: 10px;
 } 
-.delete_btn {
-  position: absolute;
-  right: 15px;
-}
+
 .test {
   position: absolute;
   right: 15px;
@@ -91,6 +86,17 @@ aside {
 }
 .projectArea.choose {
   visibility: visible;
+}
+.task {
+  display: flex;
+  border: none;
+  border-bottom: 2px black solid;
+  height: 70px;
+  align-items: center;
+}
+.delete_task_btn {
+  position: absolute;
+  right: 280px;
 }
 .newTaskbtn {
   margin: 10px;

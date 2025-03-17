@@ -1,8 +1,8 @@
-//import {} from './scripts/task.js';
-
 let project_map = new Map();
 let project_page0 = document.getElementById("project_page0");
+// project_page0 is Inbox
 project_map.set(0, project_page0);
+
 // show new project dialog
 function newProject() {
     const newProjectDialog = document.getElementById("new_project_dialog");    
@@ -81,7 +81,7 @@ function newProjectSubmit(event){
     newTaskbtn.textContent = "New Task";
     newTaskbtn.onclick = newTask;
 
-    project_page.style.backgroundColor = "gray";
+    project_page.style.backgroundColor = "white";
     project_page.className = "projectArea"
     project_page.appendChild(newTaskbtn);
 
@@ -125,13 +125,3 @@ function chooseProject(btn_id){
     choose_btn.classList.add('active');
     project_map.get(btn_id).classList.add('choose');
 }
-
-// // choose the project which is chosen
-// function chooseProject(btn_id_num){
-//     for(var i = 0; i < project_nums; i++){
-//         let btn = document.getElementById(`project${i}`);
-//         btn.classList.remove('active');
-//     }
-//     let choosebtn = document.getElementById(`project${btn_id_num}`);
-//     choosebtn.classList.add('active');
-// }
