@@ -55,18 +55,13 @@ aside {
   margin-bottom: 10px;
 }
 
-.check_box {
-  margin: 10px;
-} 
+
 
 .test {
   position: absolute;
   right: 15px;
 }
-.description {
-  margin: 0;
-  color: gray;  
-}
+
 #content{
   position: relative;
   margin-left: 241px;
@@ -82,21 +77,47 @@ aside {
   position: absolute;
   top: 0;
   left: 0;
+  background-color: rgba(255, 210, 127, 0.231);
   visibility: hidden;
 }
 .projectArea.choose {
   visibility: visible;
 }
 .task {
+  border: 1px solid #ccc;
+  height: 60px;
+  /* margin-bottom: 10px; */
+  border-radius: 6px;
+  background: #fff8ee;
+}
+.check_box {
+  margin: 10px;
+} 
+.task-header {
   display: flex;
-  border: none;
-  border-bottom: 2px black solid;
-  height: 70px;
+  justify-content: space-between;
   align-items: center;
+}
+.task-header input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.task_label {
+  font-weight: bold;
+  font-size: 16px;
+  flex-grow: 1;
+}
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+  padding-left: 24px;
 }
 .delete_task_btn {
   position: absolute;
   right: 280px;
+  display: flex;
+  align-items: center;
 }
 .newTaskbtn {
   margin: 10px;

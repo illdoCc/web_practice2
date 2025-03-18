@@ -12,9 +12,12 @@
     </div>
 
     <!-- 側邊欄 -->
-    <aside id="asidebar">
-      <div onclick="chooseProject(0)" id="project0" class="project active" style="width: 250px;">
-        Inbox
+    <aside id="asidebar" style="background-color: #ffeace;">
+      <!-- <div onclick="chooseProject(0)" id="project0" class="project active" style="width: 240px;"> -->
+      <div id="project0" class="project active" style="width: 240px;">
+        <span onclick= "chooseProject(0); return false" class="project_name">
+          Inbox
+        </span>
       </div>
       <button onclick="newProject()" id="new_project">
         New Project
@@ -30,7 +33,7 @@
 
     <!-- 新增Project視窗 -->
     <dialog id="new_project_dialog">
-      Task Name: 
+      Project Name: 
       <input type="text" id="project_name_box" name="project_name_box" placeholder="Project Name" size="10" />
       <button onclick="cancel(event)">Cancel</button>
       <button onclick="newProjectSubmit(event)">Submit</button>
