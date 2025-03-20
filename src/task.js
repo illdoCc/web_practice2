@@ -18,9 +18,13 @@ export function newTaskSubmit(activeProjectId){
     // dialog當中user輸入的內容
     const taskName = document.getElementById("task_name_box").value;
     const description = document.getElementById("description_box").value;
-    const date = document.getElementById("date_box").value;
-    let weekDay = new Date(date.split('-').map(e => parseInt(e)));
-    weekDay = format(weekDay, 'EEEE');
+    let date = document.getElementById("date_box").value;
+    if(date){
+        let weekDay = new Date(date.split('-').map(e => parseInt(e)));
+        weekDay = format(weekDay, 'EEEE');
+        date = date + `(${weekDay})`;
+    }
+
     // console.log(format(day, 'EEEE'));
 
 
@@ -50,7 +54,7 @@ export function newTaskSubmit(activeProjectId){
     
     let description_p = document.createElement("p");
     description_p.className = "description";
-    description_p.textContent = (description ? description + ", " : "") + date + `(${weekDay})`;
+    description_p.textContent = (description ? description + ", " : "") + date;
     
     let deleteButton = document.createElement("button");
     deleteButton.className = "delete_task_btn";
