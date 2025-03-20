@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test Page</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <script defer src="main.js"></script></head>
+  <body>
+    <!-- 標題 -->
+    <div style="background-color: rgba(169, 86, 27, 0.492); border-bottom:2px solid; width: 100vw; height: 80px; font-size: 50px; text-align: center; vertical-align: middle; line-height: 80px;">
+      Todo List
+    </div>
+
+    <!-- 側邊欄 -->
+    <aside id="asidebar" style="background-color: #ffeace;">
+      <!-- <div onclick="chooseProject(0)" id="project0" class="project active" style="width: 240px;"> -->
+      <div id="project0" class="project active" style="width: 240px;">
+        <span id="inbox" class="project_name">
+          Inbox
+        </span>
+      </div>
+      <button id="new_project">
+        New Project
+      </button>
+    </aside>
+
+    <!-- 新增右邊任務列表 -->
+    <div class="content" id="content" style="background-color: rgb(253, 0, 0);">
+      <div class="projectArea choose" id="project_page0" style="background-color: rgba(255, 210, 127, 0.231);">
+        <button id="new_task0" class="newTaskbtn">New Task</button>
+      </div>
+    </div>
+
+    <!-- 新增Project視窗 -->
+    <dialog id="new_project_dialog">
+      Project Name: 
+      <input type="text" id="project_name_box" name="project_name_box" placeholder="Project Name" size="10" />
+      <button class="cancel">Cancel</button>
+      <button id="project_submit_btn">Submit</button>
+    </dialog>
+
+    <!-- 新增new task視窗 -->
+    <dialog id="new_task_dialog">
+      Task Name<br />
+      <input class="new_task_input" type="text" id="task_name_box" name="task_name_box" placeholder="Task" />
+      Description<br />
+      <input class="new_task_input" type="text" id="description_box" name="description_box" placeholder="Description" />
+      Due Date<br />
+      <input class="new_task_input" type="date" id="date_box" name="data_box" />
+      Priority(1 is most important)<br />
+      <input class="new_task_input" type="number" id="priority" name="priority" min="1" max="4" />
+      <button class="cancel">Cancel</button>
+      <button id="task_submit_btn">Submit</button>
+    </dialog>
+  </body>
+</html>
