@@ -1,10 +1,31 @@
-// loadProjectsFromLocalStorage();
+import "./style.css";
+import { newTask, newTaskSubmit } from "./task.js";
+import { saveToLocal } from "./utils.js";
+import { project_map } from "./state.js";
 
-let project_map = new Map();
+// add event listener to buttons
+document.getElementById("inbox").addEventListener('click', () => {
+    chooseProject(0);
+});
+document.getElementById("new_project").addEventListener('click', newProject);
+document.getElementById("new_task0").addEventListener('click', newTask);
+const cancel_btns = document.getElementsByClassName("cancel");
+Array.from(cancel_btns).forEach(btn => {
+    btn.addEventListener('click', (event) => {
+        cancel(event);
+    });
+});
+document.getElementById("project_submit_btn").addEventListener('click', (event) => {
+    newProjectSubmit(event);
+})
+document.getElementById("task_submit_btn").addEventListener('click', () => {
+    newTaskSubmit(activeProjectId);
+})
+
+
 let project_page0 = document.getElementById("project_page0");
 // project_page0 is Inbox
 project_map.set(0, project_page0);
-
 // show new project dialog
 function newProject() {
     const newProjectDialog = document.getElementById("new_project_dialog");    
@@ -108,27 +129,27 @@ function chooseProject(btn_id){
     project_map.get(btn_id).classList.add('choose');
 }
 
-function saveToLocal(){
-    const project_list = []
-    for(var [key, projectPage] of project_map){
-        let project = {
-            id_num: key,
-            projectName: document.getElementById(`project${key}`).querySelector(".project_name").innerText,
-            tasks: []
-        };
+// function saveToLocal(){
+//     const project_list = []
+//     for(var [key, projectPage] of project_map){
+//         let project = {
+//             id_num: key,
+//             projectName: document.getElementById(`project${key}`).querySelector(".project_name").innerText,
+//             tasks: []
+//         };
         
-        const taskElements = Array.from(projectPage.querySelectorAll(".task"));
-        taskElements.forEach(taskElement => {
-            const checkbox = taskElement.querySelector(".check_box");
-            const completed = checkbox.checked;
-            const task_name = taskElement.querySelector(".task_label").textContent;
-            const description = taskElement.querySelector(".description").textContent;
-            project.tasks.push({completed, task_name, description});
-        });
-        project_list.push(project);
-    }
-    localStorage.setItem("project_list", JSON.stringify(project_list));
-}
+//         const taskElements = Array.from(projectPage.querySelectorAll(".task"));
+//         taskElements.forEach(taskElement => {
+//             const checkbox = taskElement.querySelector(".check_box");
+//             const completed = checkbox.checked;
+//             const task_name = taskElement.querySelector(".task_label").textContent;
+//             const description = taskElement.querySelector(".description").textContent;
+//             project.tasks.push({completed, task_name, description});
+//         });
+//         project_list.push(project);
+//     }
+//     localStorage.setItem("project_list", JSON.stringify(project_list));
+// }
 // let i = 0;
 function loadFromLocal(){
     const storedProjects = localStorage.getItem("project_list");

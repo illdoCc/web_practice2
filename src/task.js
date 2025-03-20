@@ -1,12 +1,15 @@
+import { saveToLocal } from "./utils";
+import { format } from "date-fns-tz";
+
 // add a new task
-function newTask(){
+export function newTask(){
     const dialog = document.getElementById("new_task_dialog");
     dialog.showModal();
 }
 
-function newTaskSubmit(){
+export function newTaskSubmit(activeProjectId){
     const dialog = document.getElementById("new_task_dialog");
-
+    // console.log(activeProjectId);
     // 取得當前的project，並取得id的數字部分，這同時也是newTaskBtn的id數字部分
     let projectArea = document.getElementById(`project_page${activeProjectId}`);
     const newTaskBtn = document.getElementById(`new_task${activeProjectId}`);
@@ -16,9 +19,11 @@ function newTaskSubmit(){
     const taskName = document.getElementById("task_name_box").value;
     const description = document.getElementById("description_box").value;
     const date = document.getElementById("date_box").value;
-    const day = date.split('-').map(e => parseInt(e))
+    let weekDay = new Date(date.split('-').map(e => parseInt(e)));
+    weekDay = format(weekDay, 'EEEE');
+    // console.log(format(day, 'EEEE'));
 
-    // console.log(day);
+
     let priority = document.getElementById("priority").value;
     priority = priority === "" ? "4" : priority;
 
@@ -45,7 +50,7 @@ function newTaskSubmit(){
     
     let description_p = document.createElement("p");
     description_p.className = "description";
-    description_p.textContent = (description ? description + ", " : "") + date;
+    description_p.textContent = (description ? description + ", " : "") + date + `(${weekDay})`;
     
     let deleteButton = document.createElement("button");
     deleteButton.className = "delete_task_btn";

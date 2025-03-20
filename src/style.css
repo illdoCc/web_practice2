@@ -1,0 +1,125 @@
+html, body {
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden
+  }
+  body {
+    font-family: Arial;
+  }
+  aside {
+    float: left;
+    border-right: 1px #0e0909 solid;
+    height: 100vw;
+  }
+  #project_name_box::placeholder {
+    color: rgb(173, 220, 173);
+  }
+  #project_name_box, select, textarea {
+    color: #0e0909;
+  }
+  /* #inbox {
+    display: block;
+  } */
+  #new_project {
+    display: block;
+    margin: 10px;
+  }
+  /* #new_task {
+    margin: 10px;
+  } */
+  
+  
+  .project {
+    border: none;
+    border-bottom: 2px rgb(0, 0, 0) solid;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .project.active {
+    background-color: rgba(215, 215, 215, 0.727);
+  }
+  .delete_btn {
+    position: absolute;
+    right: 15px;
+  }
+  .new_task_input {
+    display: block; 
+    width: 200px;
+    margin-top: 5px; 
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  .test {
+    position: absolute;
+    right: 15px;
+  }
+  
+  #content{
+    position: relative;
+    margin-left: 241px;
+    /* overflow: hidden; */
+  }
+  #asidebar {
+    width: 240px;
+    overflow: hidden;
+  }
+  .projectArea {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 210, 127, 0.231);
+    visibility: hidden;
+  }
+  .projectArea.choose {
+    visibility: visible;
+  }
+  .task {
+    border: 1px solid #ccc;
+    height: 60px;
+    /* margin-bottom: 10px; */
+    border-radius: 6px;
+    background: #fff8ee;
+  }
+  .check_box {
+    margin: 10px;
+  } 
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .task-header input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .task_label {
+    font-weight: bold;
+    font-size: 16px;
+    flex-grow: 1;
+  }
+  .description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 4px;
+    padding-left: 24px;
+  }
+  .delete_task_btn {
+    position: absolute;
+    right: 280px;
+    display: flex;
+    align-items: center;
+  }
+  .newTaskbtn {
+    margin: 10px;
+  }
+  
